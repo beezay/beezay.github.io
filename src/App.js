@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <p>Being Deployed From Master!!</p>
+      <p>Demo Deployed From Master!!</p>
     </div>
   );
 }
