@@ -1,11 +1,10 @@
 
-import './App.css';
+import NavbarWrapper from './containers/Navbar/NavbarWrapper';
+import './styles/App.css';
 
 function App() {
   return (
-    <div className="App">
-      <p>Demo Deployed From Master!!</p>
-    </div>
+    <NavbarWrapper />
   );
 }
 
