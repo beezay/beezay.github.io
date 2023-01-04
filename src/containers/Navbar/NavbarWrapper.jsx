@@ -36,7 +36,7 @@ const NavbarWrapper = () => {
   };
 
   return (
-    <HideOnScroll {...props}>
+    <HideOnScroll>
       <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
