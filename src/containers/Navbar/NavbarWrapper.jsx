@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { pages, settings } from '../../data/data';
+import HideOnScroll from '../../components/HideOnScroll';
 
 
 
@@ -35,7 +36,8 @@ const NavbarWrapper = () => {
   };
 
   return (
-    <AppBar position="static">
+    <HideOnScroll {...props}>
+      <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -135,6 +137,7 @@ const NavbarWrapper = () => {
         </Toolbar>
       </Container>
     </AppBar>
+      </HideOnScroll>
   );
 };
 
