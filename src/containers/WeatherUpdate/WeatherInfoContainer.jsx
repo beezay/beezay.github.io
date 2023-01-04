@@ -1,15 +1,12 @@
-import { Box, Button, Card, CardContent, Grid, Typography } from '@mui/material'
-import React from 'react'
+import { Button, Card, CardContent, Grid, Typography } from '@mui/material'
+import { actionDispatch } from 'core/hooks/useActionDispatch'
 import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { fetchWeatherAPIData } from '../../slices/WeatherAPISlice/weatherAPISlice'
+import { fetchWeatherAPIData } from 'slices/WeatherAPISlice/weatherAPISlice'
 
 const WeatherInfoContainer = () => {
 
-  const dispatch = useDispatch()
-
   useEffect(()=>{
-    dispatch(fetchWeatherAPIData())
+    actionDispatch(fetchWeatherAPIData())
   },[])
 
   return (

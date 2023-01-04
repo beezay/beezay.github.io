@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { OPEN_WEATHER_API } from "../../core/consts";
+import { OPEN_WEATHER_API } from "core/consts";
 
 export const weatherAPIInitialState = {
   isLoadingWeatherData: false,
