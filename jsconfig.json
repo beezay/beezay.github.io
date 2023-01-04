@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "checkJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+    "paths": {
+      "components": ["components/*"],
+      "containers": ["containers/*"],
+      "modules": ["modules/*"],
+      "pages": ["pages/*"],
+      "core": ["core/*"],
+      "styles": ["styles/*"],
+      "assets": ["assets/*"],
+    }
+  },
+  "include": ["**/*.jsx", "**/*.js"],
+  "exclude": ["node_modules"]
+}
