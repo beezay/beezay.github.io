@@ -13,12 +13,18 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { pages, settings } from '../../data/data';
 import HideOnScroll from '../../components/HideOnScroll';
+import {Brightness4 as Brightness4Icon, Brightness7 as Brightness7Icon} from '@mui/icons-material';
+import { useTheme } from '@mui/material/styles';
+import { ColorModeContext } from '../../context/ColorModeContext';
 
 
 
 const NavbarWrapper = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const theme = useTheme();
+  const colorMode = React.useContext(ColorModeContext)
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -134,6 +140,17 @@ const NavbarWrapper = () => {
               ))}
             </Menu>
           </Box>
+          <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode}  color="inherit">
+        {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+      </IconButton>
+    </Box>
         </Toolbar>
       </Container>
     </AppBar>

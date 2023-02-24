@@ -1,0 +1,8 @@
+##### Git Branch used
+ # master ----> 
+ # dev -------> test merge of all features before going to production
+
+ ## Features Branch
+ # routes ------> implement routing with Protected and Public routes
+ # firebase ----> implement firebase
+ 
