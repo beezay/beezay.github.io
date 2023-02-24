@@ -43,6 +43,16 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.32.2",
     "gh-pages": "^3.2.3"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/beezay/beezay.github.io.git",
+  "author": "Bijay Bohora <bijay.okur@gmail.com>",
+  "license": "MIT"
 }

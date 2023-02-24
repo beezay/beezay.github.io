@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "ES6",
+    "module": "ESNext",
+    "paths": {
+      "components/*": ["components/*"],
+      "containers/*": ["containers/*"],
+      "context/*": ["context/*"],
+      "core/*": ["core/*"],
+      "modules/*": ["modules/*"],
+      "pages/*": ["pages/*"],
+      "styles/*": ["styles/*"],
+      "data/*": ["data/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,45 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/jsx-runtime"],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "eqeqeq": "error",
+    "strict": "warn",
+    "no-debugger": "error",
+    "no-dupe-keys": "error",
+    "no-duplicate-imports": "error",
+    "no-unreachable": "error",
+    "no-unused-vars": "error",
+    "camelcase": "warn",
+    "default-case": "warn",
+    "no-alert": "warn",
+    "no-console": "warn",
+    "no-empty": "error",
+    "no-empty-function": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "import/prefer-default-export": "off",
+    "no-multiple-empty-lines": ["error", { "max": 2 }],
+    "import/no-unresolved": "off",
+    "react/prefer-stateless-function": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-fragments": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": [".*"]
+      }
+    ]
+  }
+}
