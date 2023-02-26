@@ -1,12 +1,12 @@
 import React from 'react'
 import NavbarWrapper from 'core/components/NavbarWrapper'
-import Login from 'core/components/Authentication/Login'
+import LoginContainer from 'core/containers/Authentication/LoginContainer'
 
 const AppContainer = () => {
   return (
     <div style={{ minHeight: '100vh' }}>
     <NavbarWrapper />
-    <Login />
+    <LoginContainer />
     </div>
   )
 }
