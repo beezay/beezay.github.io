@@ -9,11 +9,10 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["react"],
   "rules": {
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "eqeqeq": "error",
     "strict": "warn",
     "no-debugger": "error",
     "no-dupe-keys": "error",

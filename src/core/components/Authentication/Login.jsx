@@ -11,30 +11,40 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { COPYRIGHT_SITE_TEXT } from "core/consts";
-import { FORGOT_PASSWORD, NO_ACCOUNT_SIGN_UP_HERE, SIGN_IN_BTN_TEXT } from "core/staticTexts";
+import {
+  FORGOT_PASSWORD,
+  NO_ACCOUNT_SIGN_UP_HERE,
+  SIGN_IN_BTN_TEXT,
+  SIGN_IN_GOOGLE_BTN_TEXT,
+} from "core/staticTexts";
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
         {COPYRIGHT_SITE_TEXT}
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
   );
 }
 
-const Login = () => {
-
+const Login = ({ handleSignInWithGoogle, handleSignInBtn }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    const loginCredentials = {
+      email: data.get("email") || "",
+      password: data.get("password") || "",
+    };
+    handleSignInBtn(loginCredentials);
   };
 
   return (
@@ -99,6 +109,15 @@ const Login = () => {
               </Link>
             </Grid>
           </Grid>
+          <Button
+            type="button"
+            fullWidth
+            variant="outlined"
+            sx={{ mt: 3, mb: 2 }}
+            onClick={handleSignInWithGoogle}
+          >
+            {SIGN_IN_GOOGLE_BTN_TEXT}
+          </Button>
         </Box>
       </Box>
       <Copyright sx={{ mt: 8, mb: 4 }} />

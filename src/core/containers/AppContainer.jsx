@@ -1,14 +1,21 @@
-import React from 'react'
-import NavbarWrapper from 'core/components/NavbarWrapper'
-import LoginContainer from 'core/containers/Authentication/LoginContainer'
-
+import NavbarWrapper from "core/components/NavbarWrapper";
+import AppRouter from "core/Routes/AppRouter";
+import { Outlet } from "react-router-dom";
 const AppContainer = () => {
-  return (
-    <div style={{ minHeight: '100vh' }}>
-    <NavbarWrapper />
-    <LoginContainer />
-    </div>
-  )
-}
+  const user = JSON.parse(localStorage.getItem("user")) || {};
 
-export default AppContainer
+  // useEffect(() => {}, []);
+
+  const isAuth = !!user?.accessToken || false;
+  console.log(isAuth);
+
+  return (
+    <>
+      <NavbarWrapper />
+      <AppRouter user={user} isAuth={isAuth} />
+      <Outlet />
+    </>
+  );
+};
+
+export default AppContainer;
