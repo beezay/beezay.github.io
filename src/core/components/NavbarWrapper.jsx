@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { pages, settings } from 'data/data';
-import HideOnScroll from 'components/HideOnScroll';
+import HideOnScroll from 'core/components/HideOnScroll';
 import {Brightness4 as Brightness4Icon, Brightness7 as Brightness7Icon} from '@mui/icons-material';
 import { useTheme } from '@mui/material/styles';
 import { ColorModeContext } from 'context/ColorModeContext';
