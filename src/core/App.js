@@ -1,11 +1,12 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { ColorModeContext } from "context/ColorModeContext";
-import "styles/App.css";
 import { THEME_DARK_MODE, THEME_LIGHT_MODE } from "core/consts";
 import AppContainer from "core/containers/AppContainer";
 import { useState, useMemo } from "react";
 import { ToastContainer } from "react-toastify";
 import { Routes, Route } from "react-router-dom";
+
+import "styles/_main.scss";
 
 const App = () => {
   const [mode, setMode] = useState(THEME_LIGHT_MODE);
