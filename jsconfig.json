@@ -1,19 +1,31 @@
 {
   "compilerOptions": {
+    "target": "es6",
     "baseUrl": "src",
-    "target": "ES6",
-    "module": "ESNext",
     "paths": {
-      "components/*": ["components/*"],
       "containers/*": ["containers/*"],
       "context/*": ["context/*"],
       "core/*": ["core/*"],
+      "data/*": ["data/*"],
       "modules/*": ["modules/*"],
-      "pages/*": ["pages/*"],
-      "styles/*": ["styles/*"],
-      "data/*": ["data/*"]
-    }
+      "slice/*": ["slice/*"],
+      "styles/*": ["styles/*"]
+    },
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules/*"]
+  "include": ["**/*.jsx", "**/*.js"],
+  "exclude": ["node_modules"]
 }

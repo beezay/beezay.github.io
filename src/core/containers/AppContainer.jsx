@@ -1,16 +1,15 @@
-import NavbarWrapper from "core/components/NavbarWrapper";
-import AppRouter from "core/Routes/AppRouter";
-import { useMemo } from "react";
-import { Outlet } from "react-router-dom";
+import NavbarWrapper from 'core/components/NavbarWrapper';
+import AppRouter from 'core/Routes/AppRouter';
+import { useMemo } from 'react';
+import { Outlet } from 'react-router-dom';
 const AppContainer = () => {
-  const user = JSON.parse(localStorage.getItem("user")) || {};
+  const user = JSON.parse(localStorage.getItem('user')) || {};
 
   // useEffect(() => {}, []);
 
-  const isAuth = useMemo(()=>{
+  const isAuth = useMemo(() => {
     return !!user?.accessToken || false;
-  },[user])
-
+  }, [user]);
 
   return (
     <>

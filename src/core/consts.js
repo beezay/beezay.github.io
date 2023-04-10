@@ -6,3 +6,5 @@ export const COPYRIGHT_SITE_TEXT = 'beecodemaster'
 export const firebaseErrorCode = {
   
 }
+
+export const ROOT_APP_STORY_PATH = 'BEECODEGUY'
