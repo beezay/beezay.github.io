@@ -28,7 +28,7 @@ const LoginContainer = ({ isAuth }) => {
     };
     localStorage.setItem("user", JSON.stringify(userInfo));
     const redirectOrigin =
-      location.state?.from?.pathname || frontendRoutes.urlHomePage;
+      location.state?.from?.pathname || frontendRoutes.urlPortfolioDashboard;
     navigate(redirectOrigin);
   };
 

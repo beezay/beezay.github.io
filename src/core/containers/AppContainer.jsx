@@ -11,7 +11,7 @@ const AppContainer = () => {
 
   return (
     <>
-      <NavbarWrapper />
+      <NavbarWrapper isAuth={isAuth} />
       <AppRouter user={user} isAuth={isAuth} />
       <Outlet />
     </>
